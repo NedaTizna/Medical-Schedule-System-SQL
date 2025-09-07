@@ -22,27 +22,10 @@ This database project is designed for clinics or hospitals to easily keep track 
    - 10 patients with phone numbers
    - A weekly schedule (Monday to Friday)
 
-## Key SQL Queries
-1. View all doctors:
-   `sql
-   SELECT * FROM Doctors;
-
-2. View all patients:
-SELECT * FROM Patients;
-
-3. View full schedule:
-SELECT * FROM Schedule;
-
-4. View all patients of Doctor Ali on Monday:
-SELECT d.Name AS Doctor, p.Name AS Patient, s.DayOfWeek, s.AppointmentTime
-FROM Schedule s
-JOIN Doctors d ON s.DoctorID = d.DoctorID
-JOIN Patients p ON s.PatientID = p.PatientID
-WHERE d.Name = 'Ali' AND s.DayOfWeek = 'Monday';
-
 Skills Practiced:
 SQL table design (with primary keys and foreign keys)
 Relational database schema creation
 Writing SELECT, JOIN, and filtering queries
 Inserting and organizing sample data
+
 Designing a scheduling system for a medical clinic
